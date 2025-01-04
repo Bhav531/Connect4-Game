@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}  
+
+body {
+    display: grid;
+    place-items: center;
+    background-color: #ffffff; /* Background set to white */
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0 20px 0;    
+    color: #000; /* Changed to black */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000; /* Changed to black */
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border: 10px solid transparent; /* Initial transparent border */
+    width: 630px;
+    background-color: rgb(74, 74, 198);
+    border-radius: 10px;
+    animation: glowing-border 1.5s infinite alternate; /* Add animation */
+}
+
+/* Keyframes for glowing border effect */
+@keyframes glowing-border {
+    0% {
+        border-color: rgba(255, 0, 0, 0.8);
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    }
+    50% {
+        border-color: rgba(0, 255, 0, 0.8);
+        box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+    }
+    100% {
+        border-color: rgba(0, 0, 255, 0.8);
+        box-shadow: 0 0 40px rgba(0, 0, 255, 0.5);
+    }
+}
+
+ul {
+    display: grid;
+    place-items: center;
+}
+
+ul p {
+    margin: 5px;
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
+    border-radius: 100px;
+    background-color: white;
+}
+
+ul:hover {
+    cursor: pointer;
+    background-color: rgb(98, 136, 238);
+}
+
+@media (max-width: 700px) {
+    .board {
+        width: 500px;
+    }
+    ul p {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 520px) {
+    .board {
+        width: 400px;
+    }
+    ul p {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 420px) {
+    .board {
+        width: 320px;
+    }
+    ul p {
+        width: 30px;
+        height: 30px;
+    }
+}
